@@ -5,15 +5,16 @@ import ar.com.juego.modelo.Nave;
 public class NaveCombate extends Nave {
 
 
-    public NaveCombate(double minerales, int persona) {
+    public NaveCombate(double minerales) {
         super();
-        this.costoConstruccion(minerales, persona);
+        this.costoConstruccion(minerales);
     }
 
     @Override
-    public void costoConstruccion(double minerales, int persona) {
+    public double costoConstruccion(double minerales) {
+        if (minerales >= 50)
         minerales = minerales - 50;
-        persona = persona - 10;
+        return minerales;
     }
 
     @Override

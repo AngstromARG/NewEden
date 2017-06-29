@@ -50,7 +50,7 @@ public class Juego {
                 turnoJugador = j.getId();
             }
         }
-        System.out.println("El primer turno pertenece el Jugador " + turnoJugador);
+        System.out.println("El primer turno pertenece al Jugador " + turnoJugador);
     }
 
     public void cambiarTurno() {

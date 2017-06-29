@@ -17,7 +17,8 @@ public abstract class Nave {
         this.modificarVelocidad = 0;
     }
 
-    public abstract void costoConstruccion(double minerales, int persona) throws Exception;
+    public abstract double costoConstruccion(double minerales) throws Exception;
+
 
     public abstract void viajarHacia(int posX, int posY, int posXuniverso, int posYuniverso);
 

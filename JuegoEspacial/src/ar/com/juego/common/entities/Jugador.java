@@ -49,15 +49,15 @@ public class Jugador extends Observado {
     public void crearNave(TipoNave tipoNave, Planeta planeta) throws Exception {
         // Todo se crea la nave una planeta especifica, depediendo del tipo de naves que quiera el jugador.
         if (tipoNave.equals(TipoNave.combate)) {
-            Nave nave = new NaveCombate(this.mineral, this.cantPersona);
+            Nave nave = new NaveCombate(this.mineral);
             planeta.setNaves(nave);
             System.out.println("Success... se agrego la nave de combate ");
         } else if (tipoNave.equals(TipoNave.utilidad)) {
-            Nave nave = new NaveUtilidad(this.mineral, this.cantPersona);
+            Nave nave = new NaveUtilidad(this.mineral);
             planeta.setNaves(nave);
             System.out.println("Success...Se agrego la nave de utilidad  ");
         } else if (tipoNave.equals(TipoNave.asedio)) {
-            Nave nave = new NaveAsedio(this.mineral, this.cantPersona);
+            Nave nave = new NaveAsedio(this.mineral);
             planeta.setNaves(nave);
             System.out.println("Success... se agrego la nave de Asedio");
         }

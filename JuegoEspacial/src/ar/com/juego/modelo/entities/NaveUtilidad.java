@@ -7,20 +7,21 @@ import ar.com.juego.modelo.Nave;
  */
 public class NaveUtilidad extends Nave {
 
-    public NaveUtilidad(double minerales, int persona) throws Exception {
+    public NaveUtilidad(double minerales) throws Exception {
         super();
-        this.costoConstruccion(minerales, persona);
+        this.costoConstruccion(minerales);
     }
 
     @Override
-    public void costoConstruccion(double minerales, int persona) throws Exception {
-        if (minerales >= 10 && persona >= 100) {
-            minerales = minerales - 10;
-            persona = persona - 100;
+    public double costoConstruccion(double minerales) throws Exception {
+        if (minerales >= 40) {
+            minerales = minerales - 40;
+
         } else {
             final String mensaje = "No tenes suficiente recursos para realizar esta operacion...";
             throw new Exception(mensaje);
         }
+        return minerales;
     }
 
     @Override

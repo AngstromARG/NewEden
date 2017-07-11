@@ -83,13 +83,19 @@ public class Jugador extends Observado {
     }
 
     public void enviarFlota() {
-
+    	List<Nave> naves = null;
+    	for (Planeta planeta:this.planetas) {
+    		if(planeta.getNaves()!=null)
+    			naves.addAll(planeta.getNaves());
+    	}
     }
 
     public void quitarNave() {
 
     }
-
+    
+    
+    
     /**
      * getters and setters
      */

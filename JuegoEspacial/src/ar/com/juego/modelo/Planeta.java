@@ -34,6 +34,7 @@ public abstract class Planeta {
         this.nivel = 1;
         this.estructura = estructura;
     }
+    
 
     //	Getters ant Setters
     public double getPoblacion() {

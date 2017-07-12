@@ -27,7 +27,7 @@ public class VistaPrincipal extends JFrame {
 		jlabel.setBounds(80, 90, 200, 50);
 		// Boton para crear Jugadores.
 		JButton btnCrearJugador = new JButton("Crear Jugador");
-		btnCrearJugador.setBounds(100, 140, 200, 40);
+		btnCrearJugador.setBounds(80, 140, 200, 40);
 
 		btnCrearJugador.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

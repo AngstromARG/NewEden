@@ -22,7 +22,11 @@ public class VistaJugador extends JFrame {
 	private JTextField text;
 	private JLabel nombre;
 	private int id = 0;
-
+	
+	 
+	/**
+	 * constructor
+	 */
 	public VistaJugador() {
 
 		this.setTitle("Crear Jugadores");
@@ -34,25 +38,26 @@ public class VistaJugador extends JFrame {
 
 		// label del nombre jugador
 		nombre = new JLabel("Nombre: ");
-		nombre.setBounds(30, 60, 100, 40);
+		nombre.setBounds(5, 50, 100, 40);
 		this.add(nombre);
+		
 		// input del nombre del jugador
-
 		text = new JTextField();
+		
 		// text.setText(this.jugador.getNombre());
-		text.setBounds(30, 90, 200, 26);
+		text.setBounds(0, 90, 200, 26);
 		this.add(text);
 
 		// show nombre del jugador ingresado..
 		item = new DefaultListModel<>();
 		// La lista que mostrara el nombre.
 		lista = new JList<>(item);
-		lista.setBounds(50, 30, 200, 50);
+		lista.setBounds(0, 5, 420, 30);
 		this.add(lista);
 
 		// boton de registrar jugadores.
 		JButton crear = new JButton("Ingresar");
-		crear.setBounds(205, 90, 130, 25);
+		crear.setBounds(205, 90, 130, 26);
 		crear.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

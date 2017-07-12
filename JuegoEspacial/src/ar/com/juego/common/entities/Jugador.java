@@ -27,6 +27,7 @@ public class Jugador extends Observado {
     private double saldo;
     private int cantPersona;
     private List<Planeta> planetas = new ArrayList<Planeta>();
+	private List<Nave> naves;
 
 
     public Jugador(String nombre, int id) {
@@ -41,8 +42,9 @@ public class Jugador extends Observado {
     }
 
     public void pasarTurno() {
-        Juego.getJuego().cambiarTurno();
         System.out.println("Jugador con el turno " + Juego.getTurnoJugador());
+        Juego.getJuego().cambiarTurno();
+        this.actualizarObservadores();
     }
 
     // crear Nave
@@ -82,18 +84,18 @@ public class Jugador extends Observado {
 
     }
 
-    public void enviarFlota() {
-    	List<Nave> naves = null;
+    public List<Nave> enviarFlota() {
+    	naves = null;
     	for (Planeta planeta:this.planetas) {
     		if(planeta.getNaves()!=null)
     			naves.addAll(planeta.getNaves());
     	}
+		return naves;
     }
 
     public void quitarNave() {
 
     }
-    
     
     
     /**
